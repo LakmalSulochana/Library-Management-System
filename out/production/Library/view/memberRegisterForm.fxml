@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextStudentRegister" prefHeight="834.0" prefWidth="728.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MemberRegisterFormController">
+   <children>
+      <AnchorPane layoutX="430.0" layoutY="123.0" prefHeight="47.0" prefWidth="292.0" style="-fx-background-color: silver; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="14.0" layoutY="7.0" text="Date -">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="90.0" layoutY="5.0" prefHeight="32.0" prefWidth="188.0" text="2021-05-21 wed">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="207.0" layoutY="15.0" text="THE GREEN LIBRARY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="32.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-7.0" layoutY="75.0" prefHeight="2.0" prefWidth="736.0" style="-fx-background-color: black;" />
+      <Label layoutX="28.0" layoutY="212.0" text="Member Id -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="286.0" text="Full Name -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="351.0" text="Address -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="514.0" text="NIC Number -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="591.0" text="Mobile Number -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelBtn" layoutX="252.0" layoutY="734.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="57.0" prefWidth="179.0" style="-fx-background-color: #3498db;" stylesheets="@../styles/style.css" text="cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+      <JFXTextField fx:id="txtMemberId" layoutX="166.0" layoutY="209.0" prefHeight="37.0" prefWidth="205.0">
+         <padding>
+            <Insets bottom="1.0" left="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" layoutX="153.0" layoutY="283.0" onKeyReleased="#validateOnAction" prefHeight="37.0" prefWidth="489.0">
+         <padding>
+            <Insets bottom="1.0" left="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" layoutX="123.0" layoutY="348.0" onKeyReleased="#validateOnAction" prefHeight="38.0" prefWidth="522.0">
+         <padding>
+            <Insets bottom="1.0" left="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNicNumber" layoutX="178.0" layoutY="511.0" onKeyReleased="#validateOnAction" prefHeight="37.0" prefWidth="467.0">
+         <padding>
+            <Insets bottom="1.0" left="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMobile" layoutX="211.0" layoutY="588.0" onKeyReleased="#validateOnAction" prefHeight="37.0" prefWidth="437.0">
+         <padding>
+            <Insets bottom="1.0" left="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="29.0" layoutY="669.0" text="E-mail Address -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmail" layoutX="200.0" layoutY="666.0" onKeyReleased="#validateOnAction" prefHeight="38.0" prefWidth="449.0">
+         <padding>
+            <Insets bottom="1.0" left="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="27.0" layoutY="430.0" prefHeight="31.0" prefWidth="94.0" text="Gender -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSex" layoutX="135.0" layoutY="430.0" prefHeight="20.0" prefWidth="161.0" />
+      <Label layoutX="341.0" layoutY="430.0" prefHeight="20.0" prefWidth="85.0" text="Age -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="txtAge" layoutX="426.0" layoutY="427.0" prefHeight="38.0" prefWidth="161.0">
+         <padding>
+            <Insets bottom="1.0" left="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="73.0" fitWidth="85.0" layoutX="122.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/4.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="135.0" layoutY="78.0" text="MemberShip Application Form">
+         <font>
+            <Font name="Bookman Old Style" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="213.0" layoutY="50.0" text="THE House Of Knowledge">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="478.0" layoutY="734.0" onAction="#addMemberOnAction" prefHeight="57.0" prefWidth="171.0" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

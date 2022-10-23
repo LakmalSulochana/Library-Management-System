@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextDominator" prefHeight="750.0" prefWidth="1400.0" styleClass="ancr" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddDominatorFormController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="126.0" prefHeight="107.0" prefWidth="1374.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <AnchorPane layoutX="-5.0" layoutY="-8.0" prefHeight="146.0" prefWidth="1379.0" style="-fx-background-color: #ecedee; -fx-background-radius: 25;">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="1229.0" layoutY="80.0" onAction="#clearTextOnAction" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: #3498db;" text="Clear" />
+                  <JFXTextField fx:id="txtId" editable="false" labelFloat="true" layoutX="14.0" layoutY="21.0" prefHeight="39.0" prefWidth="176.0" promptText="Id">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="16.0" layoutY="94.0" onKeyReleased="#ValidateOnAction" prefHeight="39.0" prefWidth="284.0" promptText="E-mail">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="txtNIC" labelFloat="true" layoutX="1179.0" layoutY="14.0" onKeyReleased="#ValidateOnAction" prefHeight="39.0" prefWidth="184.0" promptText="NIC">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtName" labelFloat="true" layoutX="238.0" layoutY="14.0" onKeyReleased="#ValidateOnAction" prefHeight="39.0" prefWidth="284.0" promptText="Full Name">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="578.0" layoutY="14.0" onKeyReleased="#ValidateOnAction" prefHeight="39.0" prefWidth="284.0" promptText="Address">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtMobile" labelFloat="true" layoutX="920.0" layoutY="14.0" onKeyReleased="#ValidateOnAction" prefHeight="31.0" prefWidth="207.0" promptText="Mobile Number">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblDominator" layoutX="7.0" layoutY="358.0" onMouseClicked="#addToFeildOnAction" prefHeight="379.0" prefWidth="1385.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="130.00003051757812" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="248.0" text="Full Name" />
+            <TableColumn fx:id="colAddress" prefWidth="254.0" text="Address" />
+            <TableColumn fx:id="colMobile" prefWidth="201.0" text="Mobile Number" />
+            <TableColumn fx:id="colNIC" prefWidth="194.0" text="NIC " />
+            <TableColumn fx:id="colEmail" prefWidth="196.0" text="E-mail" />
+            <TableColumn fx:id="colDate" prefWidth="159.0" text="Date" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="addAndBackBtn" buttonType="RAISED" layoutX="880.0" layoutY="283.0" onAction="#addButtonOnAction" prefHeight="47.0" prefWidth="166.0" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="1069.0" layoutY="282.0" onAction="#deleteOnAction" prefHeight="47.0" prefWidth="148.0" style="-fx-background-color: red;" text="delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="1245.0" layoutY="283.0" onAction="#updateOnAction" prefHeight="47.0" prefWidth="141.0" style="-fx-background-color: #9980FA;" text="update info" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <Separator layoutX="-3.0" layoutY="86.0" prefHeight="3.0" prefWidth="1400.0" />
+      <ImageView fitHeight="79.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/4.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="89.0" layoutY="10.0" prefHeight="36.0" prefWidth="339.0" text="THE GREEN LIBRARY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="33.0" prefHeight="36.0" prefWidth="227.0" text="The House Of Knowladge">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1143.0" layoutY="5.0" prefHeight="47.0" prefWidth="254.0" text="2021-04-08 wed" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="memberCard" pageWidth="470" pageHeight="300" columnWidth="430" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7ad0b52-08c3-425c-8918-b997d6e005d9">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="memberId" class="java.lang.String"/>
+	<parameter name="memberName" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="-21" width="100" height="80" uuid="3a1cb8b2-6e73-4666-9e84-d89f5c7be1b1"/>
+				<imageExpression><![CDATA["E:/intlije/java fx/Library/src/assets/4.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="70" y="-10" width="150" height="47" uuid="76b62a91-f896-47ed-8e10-c9923bac652a"/>
+				<textElement textAlignment="Left">
+					<font size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THE GREEN LIBRARY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="30" width="131" height="25" uuid="c7a663e8-e27a-48c8-906b-d4eba124e3d0"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Membership Card]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="-21" width="111" height="30" uuid="d8019a08-3755-4c57-aee0-d69f380dd826"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-18" y="55" width="468" height="1" uuid="015d96bc-0db4-4a48-b7a8-24b0582cf5c2"/>
+			</line>
+			<staticText>
+				<reportElement x="240" y="-20" width="90" height="30" uuid="08fc1121-9c90-4f11-973a-c47585af760f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Issue Date -]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="179" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="30" width="130" height="30" uuid="a2b7a34a-05e9-41c5-9dea-4e0d7fc0b6c2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="145" height="30" uuid="baccd5ea-2387-4ac3-9577-71e076ace7ab"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="30" width="143" height="30" uuid="7efa4ffb-002b-4588-9b6c-20399d1b34b2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="110" height="30" uuid="0c6e60df-d795-4e9e-8706-2e2bc1fe717a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="0" width="100" height="30" uuid="e0c35c56-437c-4e11-9bc3-91ef049b04de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member Id -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="30" width="100" height="30" uuid="91c2566f-1db6-48a1-b6a7-1a2611ffbcb5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name      -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="100" height="30" uuid="a55362cf-d0ed-4b65-a1d3-8e3b1536abf3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="30" width="100" height="30" uuid="e97ffe19-0627-44ce-9a13-e76796e83f64"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="76" width="300" height="34" uuid="92fcf2c4-74de-439a-8431-0e8830ac420c"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[* Bring this Card Whenever You Visit the Library This Card In not Transaferable]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="120" width="433" height="50" uuid="3d2b7b07-7378-4628-b694-0cd58c1bec13"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="9" y="127" width="415" height="39" uuid="4fb10265-cf03-4675-8da0-268cf72584ff"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[If found Please Return to gampaha GREEN library 033-2545867 / 077-7541256]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextAdmin" prefHeight="727.0" prefWidth="1425.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutY="155.0" prefHeight="595.0" prefWidth="253.0" style="-fx-background-color: #3e6c97;">
+         <children>
+            <ToggleButton alignment="CENTER_LEFT" graphicTextGap="17.0" mnemonicParsing="false" onAction="#dashBoardOnAction" prefHeight="64.0" prefWidth="253.0" selected="true" text="Dash Board" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TACHOMETER" size="30" wrappingWidth="30.0" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="tbtn" />
+                  <String fx:value="glyph-icon" />
+               </styleClass>
+               <toggleGroup>
+                  <ToggleGroup fx:id="adminToggle" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </ToggleButton>
+            <ToggleButton alignment="CENTER_LEFT" graphicTextGap="17.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#issueBookOnAction" prefHeight="64.0" prefWidth="253.0" text="Issue Book" textFill="WHITE" toggleGroup="$adminToggle">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MAIL_FORWARD" size="30" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="tbtn" />
+                  <String fx:value="glyph-icon" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </ToggleButton>
+            <ToggleButton alignment="CENTER_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="119.0" mnemonicParsing="false" onAction="#returnBookOnAction" prefHeight="64.0" prefWidth="253.0" text="return Book" textFill="WHITE" toggleGroup="$adminToggle">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MAIL_REPLY" size="30" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="tbtn" />
+                  <String fx:value="glyph-icon" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </ToggleButton>
+            <ToggleButton alignment="CENTER_LEFT" graphicTextGap="18.0" layoutX="10.0" layoutY="228.0" mnemonicParsing="false" onAction="#bookAndCategeroyMaintailOnAction" prefHeight="64.0" prefWidth="253.0" text="Book &amp; Categeory" textFill="WHITE" toggleGroup="$adminToggle">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS_SQUARE" size="30" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="tbtn" />
+                  <String fx:value="glyph-icon" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </ToggleButton>
+            <ToggleButton alignment="CENTER_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="337.0" mnemonicParsing="false" onAction="#memberDetailOnAction" prefHeight="64.0" prefWidth="253.0" text="Member Detail" textFill="WHITE" toggleGroup="$adminToggle">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="28" wrappingWidth="29.28571319580078" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="tbtn" />
+                  <String fx:value="glyph-icon" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </ToggleButton>
+            <ToggleButton alignment="CENTER_LEFT" graphicTextGap="18.0" layoutX="10.0" layoutY="330.0" mnemonicParsing="false" onAction="#addDominatorOnAction" prefHeight="64.0" prefWidth="253.0" text="Add Donator" textFill="WHITE" toggleGroup="$adminToggle">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="30" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="tbtn" />
+                  <String fx:value="glyph-icon" />
+               </styleClass>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </ToggleButton>
+            <ToggleButton alignment="CENTER_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="478.0" mnemonicParsing="false" onAction="#IssueHistoryOnAction" prefHeight="64.0" prefWidth="253.0" text="History" textFill="WHITE" toggleGroup="$adminToggle">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_DOWN" size="30" text="" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="tbtn" />
+                  <String fx:value="glyph-icon" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </ToggleButton>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="contexDashBoard" layoutX="269.0" onKeyReleased="#txtSearch" prefHeight="743.0" prefWidth="1404.0" styleClass="ancr">
+         <children>
+            <AnchorPane layoutX="6.0" layoutY="181.0" prefHeight="160.0" prefWidth="1382.0" style="-fx-background-color: #dfe4ea; -fx-background-radius: 25;">
+               <children>
+                  <AnchorPane layoutX="365.0" layoutY="13.0" prefHeight="132.0" prefWidth="344.0" style="-fx-background-color: #18cc04; -fx-background-radius: 15;">
+                     <children>
+                        <ImageView fitHeight="132.0" fitWidth="142.0" layoutX="211.0" layoutY="2.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/983470-200.png" />
+                           </image>
+                        </ImageView>
+                        <Label contentDisplay="TOP" layoutX="2.0" layoutY="85.0" prefHeight="45.0" prefWidth="183.0" text="Total Member" textFill="WHITE">
+                           <font>
+                              <Font name="Palatino Linotype" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalMember" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="3.0" layoutY="43.0" prefHeight="42.0" prefWidth="92.0" text="420" textFill="WHITE">
+                           <font>
+                              <Font name="Britannic Bold" size="41.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="132.0" prefWidth="344.0" style="-fx-background-color: #4d47f5; -fx-background-radius: 15;">
+                     <children>
+                        <Label contentDisplay="TOP" layoutX="3.0" layoutY="87.0" prefHeight="45.0" prefWidth="199.0" text="Available Book" textFill="WHITE">
+                           <font>
+                              <Font name="Palatino Linotype" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalBook" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="1.0" layoutY="43.0" prefHeight="0.0" prefWidth="125.0" text="450" textFill="WHITE">
+                           <font>
+                              <Font name="Britannic Bold" size="44.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="132.0" fitWidth="142.0" layoutX="204.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon-of-book-19.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="716.0" layoutY="13.0" prefHeight="132.0" prefWidth="344.0" style="-fx-background-color: #fc743a; -fx-background-radius: 15;">
+                     <children>
+                        <ImageView fitHeight="132.0" fitWidth="142.0" layoutX="212.0" layoutY="2.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/borrow-icon-10.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblBarrowBook" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="1.0" layoutY="47.0" prefHeight="12.0" prefWidth="125.0" text="102" textFill="WHITE">
+                           <font>
+                              <Font name="Britannic Bold" size="41.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="TOP" layoutX="2.0" layoutY="89.0" prefHeight="45.0" prefWidth="209.0" text="Barrowed Book" textFill="WHITE">
+                           <font>
+                              <Font name="Palatino Linotype" size="29.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="1069.0" layoutY="14.0" prefHeight="132.0" prefWidth="306.0" style="-fx-background-color: #cc34eb; -fx-background-radius: 15;">
+                     <children>
+                        <Label contentDisplay="TOP" layoutX="3.0" layoutY="87.0" prefHeight="45.0" prefWidth="183.0" text="Total donors" textFill="WHITE">
+                           <font>
+                              <Font name="Palatino Linotype" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalDonors" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="1.0" layoutY="43.0" prefHeight="0.0" prefWidth="125.0" text="450" textFill="WHITE">
+                           <font>
+                              <Font name="Britannic Bold" size="44.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="132.0" fitWidth="142.0" layoutX="174.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/2412142-200.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="307.0" layoutY="364.0" prefHeight="372.0" prefWidth="1079.0" style="-fx-background-color: #dfe4ea; -fx-background-radius: 25;">
+               <children>
+                  <TableView fx:id="tblDashBoard" layoutX="14.0" layoutY="11.0" prefHeight="351.0" prefWidth="1049.0">
+                     <columns>
+                        <TableColumn fx:id="colBookId" prefWidth="119.0" text="Book Id" />
+                        <TableColumn fx:id="colBookName" prefWidth="212.0" text="Book Name" />
+                        <TableColumn fx:id="colTitle" prefWidth="197.0" text="Title" />
+                        <TableColumn fx:id="colCategory" prefWidth="191.0" text="Category" />
+                        <TableColumn fx:id="colLanguage" prefWidth="179.0" text="language" />
+                        <TableColumn fx:id="colStatus" prefWidth="149.0" text="Status" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="93.0" fitWidth="125.0" layoutX="-8.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/4.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="4.0" layoutY="89.0" prefHeight="0.0" prefWidth="1400.0" />
+            <Label layoutX="102.0" layoutY="11.0" text="THE GREEN LIBRARY">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="107.0" layoutY="43.0" text="The House Of Knowladge">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="17.0" />
+               </font>
+            </Label>
+            <JFXButton contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="1254.0" layoutY="27.0" onAction="#logOutOnAction" prefHeight="46.0" prefWidth="132.0" style="-fx-background-color: #e86666; -fx-background-radius: 25;" text="Log Out">
+               <graphic>
+                  <FontAwesomeIconView glyphName="SIGN_OUT" size="25" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutX="1160.0" layoutY="101.0" prefHeight="72.0" prefWidth="226.0" style="-fx-background-color: #dfe4ea; -fx-background-radius: 25;">
+               <children>
+                  <Label fx:id="lblTime" layoutX="14.0" layoutY="8.0" prefHeight="56.0" prefWidth="199.0" text="04:45:45 PM">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="861.0" layoutY="101.0" prefHeight="72.0" prefWidth="290.0" style="-fx-background-color: #dfe4ea; -fx-background-radius: 25;">
+               <children>
+                  <Label fx:id="lblDate" layoutX="14.0" layoutY="5.0" prefHeight="56.0" prefWidth="260.0" text="2021-02-05 wed">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="54.0" layoutY="114.0" prefHeight="46.0" prefWidth="280.0" promptText="Search">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="11.0" layoutY="149.0" size="30" text="" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" height="372.0" layoutX="14.0" layoutY="364.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="280.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#99ff23" />
+                        <Stop color="#fff52e" offset="0.9963768115942029" />
+                        <Stop color="#fff52e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="376.0" prefHeight="340.0" prefWidth="280.0" text=" THE ONLY THING THAT   &#10; YOU ABSOLUTELY&#10; HAVE&#10; TO KNOW,&#10;IS THE LOCATION&#10; OF THE LIBRARY&#10;&#10;-ALBERT EINSTINE-&#10;" textAlignment="CENTER">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="38.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e6c97" height="160.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="253.0" />
+      <Ellipse fill="#e2eef8" layoutX="45.0" layoutY="43.0" radiusX="42.0" radiusY="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView blendMode="MULTIPLY" fitHeight="79.0" fitWidth="86.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/22-220721_circled-user-male-type-user-colorful-icon-png-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Ellipse fill="#00fc00" layoutX="14.0" layoutY="124.0" radiusX="5.0" radiusY="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label layoutX="24.0" layoutY="112.0" text="Online" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="80.0" prefHeight="32.0" prefWidth="219.0" text="User" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

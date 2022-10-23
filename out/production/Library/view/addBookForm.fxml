@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="794.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddBookFormController">
+   <children>
+      <Separator layoutY="80.0" prefHeight="0.0" prefWidth="688.0" />
+      <ImageView fitHeight="66.0" fitWidth="96.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/4.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="80.0" layoutY="9.0" prefHeight="34.0" prefWidth="315.0" text="THE GREEN LIBRARY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="84.0" layoutY="32.0" prefHeight="32.0" prefWidth="208.0" text="The House Of Knowladge">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="213.0" text="Book Id -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="txtBookId" layoutX="120.0" layoutY="213.0" prefHeight="31.0" prefWidth="315.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="14.0" layoutY="277.0" text="Book Name -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="txtBookName" layoutX="162.0" layoutY="277.0" prefHeight="31.0" prefWidth="325.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="18.0" layoutY="491.0" text="Author Name -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="txtAuthorName" layoutX="179.0" layoutY="491.0" prefHeight="31.0" prefWidth="315.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="15.0" layoutY="550.0" text="Language -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="txtLanguage" layoutX="144.0" layoutY="550.0" prefHeight="31.0" prefWidth="325.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="14.0" layoutY="607.0" text="Released Year -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="txtReleaseDate" layoutX="180.0" layoutY="607.0" prefHeight="31.0" prefWidth="294.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="19.0" layoutY="434.0" text="Title -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="txtTitle" layoutX="134.0" layoutY="434.0" prefHeight="31.0" prefWidth="362.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="cancelButtonOnAction" layoutX="262.0" layoutY="723.0" onAction="#cancelButtonOnAction" prefHeight="45.0" prefWidth="176.0" style="-fx-background-color: #3498db; -fx-background-radius: 25;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="saveButtonOnAction" layoutX="464.0" layoutY="718.0" onAction="#saveButtonOnAction" prefHeight="45.0" prefWidth="176.0" stylesheets="@../styles/style.css" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></JFXButton>
+      <Label layoutX="14.0" layoutY="343.0" text="Select Category-">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <JFXComboBox fx:id="cmbSelectCategory" layoutX="193.0" layoutY="343.0" prefHeight="31.0" prefWidth="176.0" />
+      <Label layoutX="19.0" layoutY="135.0" text="Add -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <JFXComboBox fx:id="cmbAddType" layoutX="97.0" layoutY="135.0" onAction="#addModeOnAction" prefHeight="31.0" prefWidth="183.0" />
+      <Label fx:id="lblDonator" layoutX="350.0" layoutY="135.0" text="Donator -">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <JFXComboBox fx:id="cmbDominatorId" layoutX="460.0" layoutY="135.0" prefHeight="31.0" prefWidth="183.0" />
+      <Label fx:id="lblAvailable" layoutX="22.0" layoutY="666.0" prefHeight="34.0" prefWidth="96.0" text="Available">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></Label>
+      <JFXToggleNode layoutX="514.0" layoutY="382.0" prefHeight="31.0" prefWidth="88.0" />
+   </children>
+</AnchorPane>

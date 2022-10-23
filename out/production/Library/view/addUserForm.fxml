@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextAddUser" prefHeight="750.0" prefWidth="1400.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.addUserFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="107.0" prefHeight="209.0" prefWidth="1376.0" style="-fx-background-radius: 25; -fx-background-color: #ecedee;">
+         <children>
+            <JFXTextField fx:id="txtUserId" labelFloat="true" layoutX="20.0" layoutY="30.0" prefHeight="31.0" prefWidth="152.0" promptText="User Id" />
+            <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="217.0" layoutY="30.0" onKeyReleased="#validateCheckOnAction" prefHeight="31.0" prefWidth="296.0" promptText="full Name" />
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="560.0" layoutY="30.0" onKeyReleased="#validateCheckOnAction" prefHeight="31.0" prefWidth="308.0" promptText="Address" />
+            <JFXTextField fx:id="txtTelephoneNumber" labelFloat="true" layoutX="915.0" layoutY="30.0" onKeyReleased="#validateCheckOnAction" prefHeight="31.0" prefWidth="225.0" promptText="Telephone Number" />
+            <JFXComboBox fx:id="cmbRole" labelFloat="true" layoutX="1169.0" layoutY="30.0" prefHeight="31.0" prefWidth="152.0" promptText="Role" />
+            <JFXTextField fx:id="txtPassword" labelFloat="true" layoutX="297.0" layoutY="104.0" onKeyReleased="#validateCheckOnAction" prefHeight="31.0" prefWidth="308.0" promptText="Password" />
+            <JFXButton layoutX="603.0" layoutY="153.0" onAction="#clearfieldOnAction" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: #3498db; -fx-background-radius: 15;" text="clear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtNIC" labelFloat="true" layoutX="14.0" layoutY="104.0" onKeyReleased="#validateCheckOnAction" prefHeight="31.0" prefWidth="235.0" promptText="NIC" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" graphicTextGap="10.0" layoutX="865.0" layoutY="337.0" onAction="#addUserOnAction" prefHeight="54.0" prefWidth="171.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 25;" text="Add User" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font></JFXButton>
+      <TableView fx:id="tblUserDetail" layoutX="14.0" layoutY="426.0" onMouseClicked="#tblMouseOnAction" prefHeight="303.0" prefWidth="1370.0">
+        <columns>
+          <TableColumn fx:id="colUserId" prefWidth="202.99996948242188" text="User Id" />
+          <TableColumn fx:id="colName" prefWidth="306.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="324.0" text="Address" />
+            <TableColumn fx:id="colNic" prefWidth="153.0" text="Nic" />
+            <TableColumn fx:id="colTelephoneNumber" prefWidth="228.0" text="Telephone Number" />
+            <TableColumn fx:id="colRole" prefWidth="153.0" text="Role" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1067.0" layoutY="338.0" onAction="#updateOnAction" prefHeight="54.0" prefWidth="146.0" style="-fx-background-color: #9980FA; -fx-background-radius: 25;" text="Update">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="1237.0" layoutY="337.0" onAction="#deleteOnAction" prefHeight="54.0" prefWidth="146.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 25;" text="Delete">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font></JFXButton>
+      <Separator layoutY="88.0" prefHeight="0.0" prefWidth="1400.0" />
+      <ImageView fitHeight="95.0" fitWidth="119.0" layoutX="-6.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/4.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="98.0" layoutY="12.0" text="THE GREEN LIBRARY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="41.0" text="The House Of Knowladge">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="873.0" layoutY="374.0" size="25" />
+   </children>
+</AnchorPane>

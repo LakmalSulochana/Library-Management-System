@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="contextAddUser" prefHeight="750.0" prefWidth="1172.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.addUserFormController">
+   <children>
+      <JFXTextField fx:id="txtUserName" layoutX="491.0" layoutY="143.0" prefHeight="31.0" prefWidth="308.0" promptText="full Name" />
+      <JFXTextField fx:id="txtUserId" layoutX="14.0" layoutY="143.0" prefHeight="31.0" prefWidth="248.0" promptText="User Id" />
+      <JFXTextField fx:id="txtAddress" layoutX="827.0" layoutY="143.0" prefHeight="31.0" prefWidth="308.0" promptText="Address" />
+      <JFXTextField fx:id="txtTelephoneNumber" layoutX="14.0" layoutY="221.0" prefHeight="31.0" prefWidth="308.0" promptText="Telephone Number" />
+      <JFXTextField fx:id="txtPassword" layoutX="724.0" layoutY="221.0" prefHeight="31.0" prefWidth="308.0" promptText="Password" />
+      <JFXButton layoutX="926.0" layoutY="337.0" onAction="#addUserOnAction" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: green;" text="Add" textFill="WHITE" />
+      <TableView fx:id="tblUserDetail" layoutX="14.0" layoutY="426.0" onMouseClicked="#tblMouseOnAction" prefHeight="328.0" prefWidth="1157.0">
+        <columns>
+          <TableColumn fx:id="colUserId" prefWidth="152.0" text="User Id" />
+          <TableColumn fx:id="colName" prefWidth="262.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="298.0" text="Address" />
+            <TableColumn fx:id="colTelephoneNumber" prefWidth="247.0" text="Telephone Number" />
+            <TableColumn fx:id="colRole" prefWidth="197.0" text="Role" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="746.0" layoutY="337.0" onAction="#updateOnAction" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: yellow;" text="Update" />
+      <JFXButton layoutX="572.0" layoutY="337.0" onAction="#deleteOnAction" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: red;" text="Delete" />
+      <JFXComboBox fx:id="cmbRole" labelFloat="true" layoutX="362.0" layoutY="221.0" prefHeight="31.0" prefWidth="240.0" promptText="Role" />
+      <JFXButton layoutX="388.0" layoutY="337.0" onAction="#clearfieldOnAction" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: red;" text="clear" />
+   </children>
+</AnchorPane>
